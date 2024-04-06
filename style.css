@@ -1,26 +1,58 @@
 body {
     margin: 0px;
 
-    .bakbak-one-regular {
-        font-family: "Bakbak One", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
+}
 
-    .nav-tabs {
-        display: flex;
-        justify-content: center;
-        /* Esto centra horizontalmente */
-        background-color: #f8f9fa;
-        /* Cambia el color de fondo según tus preferencias */
-        /* Agrega otros estilos según tus necesidades */
-        margin-bottom: 15px;
-        margin-top: 15px;
-    }
+.bakbak-one-regular {
+    font-family: "Bakbak One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
-    .nav-item {
-        /* Estilos para los elementos de la barra de navegación */
-        margin: 0 30px;
-        /* Espacio entre los elementos */
-    }
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    /* Esto centra horizontalmente */
+    background-color: #f8f9fa;
+    /* Cambia el color de fondo según tus preferencias */
+    /* Agrega otros estilos según tus necesidades */
+    margin-bottom: 15px;
+
+}
+
+.nav-item {
+    /* Estilos para los elementos de la barra de navegación */
+    margin: 0 30px;
+    /* Espacio entre los elementos */
+}
+
+.columna-beneficios {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+    text-align: center
+}
+
+.columna-beneficios-textos {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 40px;
+}
+
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titulo-Opiniones-Clinetes {
+    margin-top: 50px;
+    font-family: "Lilita One", sans-serif;
+    font-size: 70px;
+    justify-content: center;
+    text-align: center;
 }
