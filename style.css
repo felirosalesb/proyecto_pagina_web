@@ -26,23 +26,6 @@ body {
     /* Espacio entre los elementos */
 }
 
-.columna-beneficios {
-    display: flex;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-bottom: 10px;
-    justify-content: space-evenly;
-    text-align: center
-}
-
-.columna-beneficios-textos {
-    display: flex;
-    margin-top: 10px;
-    justify-content: space-evenly;
-    text-align: center;
-    font-size: 40px;
-}
-
 .lilita-one-regular {
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
@@ -178,4 +161,41 @@ footer {
                 0 0 45px #FF3E00,
                 0 0 75px #FF3E00,
                 0 0 115px #FF3E00;
+}
+
+/* beneficios */
+.container {
+    width: 80%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.columna-beneficios {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.columna-beneficios img {
+    margin: 10px;
+}
+
+.columna-beneficios-textos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.columna-beneficios-textos p {
+    margin: 10px;
+}
+
+hr {
+    width: 100%;
+    margin: 20px 0;
 }
