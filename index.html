@@ -11,25 +11,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9a334a7bb3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- barra de navegacion-->
     <div class="website-total-page">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">Cafesillos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link text-white" href="#">Productos</a>
+                        <a class="nav-link text-white" href="#">Contactanos</a>
+                    </div>
+                </div>
+                <div class="ml-auto navbar-custom-icons">
+                    <a class="text-white" href="#"><i class="fas fa-user"></i></a>
+                    <a class="text-white ms-3" href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </nav>
+
 
         <!-- carrusel con las fotos -->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -43,14 +52,31 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="beneficios-del-cafe-en-grano_.jpg" class="d-block w-100" alt="granos">
+                    <img src="granos de cafe.jpg" class="d-block w-100" alt="granos">
+                    <div class="carousel-caption">
+                        <h5>¿Sabías que el café arábica se originó en África?</h5>
+                        <p>Si hablamos del arábica, siendo el que más se produce en Colombia, sus raíces las tiene en
+                            Etiopía, país en dónde más se cultiva, correspondiendo al 60 % de la producción mundial.
+                            Mientras tanto, la robusta es de Uganda, tiene mucha más cafeína y tiene aproximadamente el
+                            35 % de la producción mundial.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="cafe-arabica-en-grano-taza-granos-cafes-el-criollo_Mesa-de-trabajo-1.jpg"
-                        class="d-block w-100" alt="preparando">
+                    <img src="preparando cafe.jpg" class="d-block w-100" alt="preparando">
+                    <div class="carousel-caption">
+                        <h5>¿Sabes cuál fue la primera cafetería del mundo?</h5>
+                        <p>En 1475, en Constantinopla (actualmente Estambul), Kiva Han abrió la primera cafetería del
+                            mundo. Mientras que en Europa, se abrió en 1645 en Venecia y en 1650 en Londres.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="caracteristicas-cafe-arabica-cafes-el-criollo_.jpg" class="d-block w-100" alt="cafe">
+                    <img src="cafe con pan.jpg" class="d-block w-100" alt="cafe">
+                    <div class="carousel-caption">
+                        <h5>¿Sabías que el café es un buen fertilizante?</h5>
+                        <p>Sí, además de sus múltiples beneficios para la salud, el café también es un buen abono para
+                            todas tus plantas, ya que les da nutrientes y minerales y ayuda a alejar a algunos insectos.
+                        </p>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -64,39 +90,46 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
+
+
         <!-- barra de navegacion-->
         <section>
-            <div class="columna-beneficios">
-
-                <span>
-                    <img src="taza-de-cafe.png" alt="taza-de-cafe" width="250px" height="250px">
-                </span>
-
-                <span> <img src="bolsa-de-cafe.png" alt="bolsa-de-cafe" width="250px" height="250px"> </span>
-
-                <span> <img src="cafe.png" alt="cafe" width="250px" height="250px"></span>
-
-                <span> <img src="planta-de-cafe.png" alt="planta-de-cafe" width="250px" height="250px"></span>
-            </div>
+            <div class="cafebene">
+                <section>
+                    <div class="columna-beneficios">
+                        <span>
+                            <img src="taza-de-cafe.png" alt="taza-de-cafe" width="150px" height="150px">
+                        </span>
+                        <span>
+                            <img src="bolsa-de-cafe.png" alt="bolsa-de-cafe" width="150px" height="150px">
+                        </span>
+                        <span>
+                            <img src="cafe.png" alt="cafe" width="150px" height="150px">
+                        </span>
+                        <span>
+                            <img src="planta-de-cafe.png" alt="planta-de-cafe" width="150px" height="150px">
+                        </span>
+                    </div>
+                </section>
+                <section>
+                    <div class="columna-beneficios-textos">
+                        <span>
+                            <p>Beneficio 1</p>
+                        </span>
+                        <span>
+                            <p>Beneficio 2</p>
+                        </span>
+                        <span>
+                            <p>Beneficio 3</p>
+                        </span>
+                        <span>
+                            <p>Beneficio 4</p>
+                        </span>
+                    </div>
+                </section>
         </section>
-        <section> <!-- HAY QUE CENTRAR MAS EL TEXTO-->
-            <div class="columna-beneficios-textos">
-                <span>
-                    <p>beneficio 1</p>
-                </span>
-                <span>
-                    <p>beneficio 1</p>
-                </span>
-                <span>
-                    <p>beneficio 1</p>
-                </span>
-                <span>
-                    <p>beneficio 1</p>
-                </span>
-
-            </div>
-        </section>
-        <hr size="8px" color="black">
+        <hr size="12px" color="black">
         <!-- Opiniones Clientes -->
         <section>
             <div class="Opiniones-de-Clientes"><!--Tiutlo-->
@@ -118,6 +151,84 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
     </div>
+    <div class="opiniones">
+        <div class="opinion">
+            <div class="nombre">Juan Pérez</div>
+            <div class="texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ducimus!</div>
+        </div>
+        <div class="opinion">
+            <div class="nombre">María López</div>
+            <div class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolor.</div>
+        </div>
+        <div class="opinion">
+            <div class="nombre">Nombre del Cliente</div>
+            <div class="texto">Contenido de la opinión del cliente.</div>
+        </div>
+        <div class="opinion">
+            <div class="nombre">Nombre del Cliente</div>
+            <div class="texto">Contenido de la opinión del cliente.</div>
+        </div>
+        <div class="opinion">
+            <div class="nombre">Nombre del Cliente</div>
+            <div class="texto">Contenido de la opinión del cliente.</div>
+        </div>
+        <div class="opinion">
+            <div class="nombre">Nombre del Cliente</div>
+            <div class="texto">Contenido de la opinión del cliente.</div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>Sobre Nosotros</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, id repellendus?
+                        Laudantium, quae neque.
+                        Explicabo, eius? Ipsa doloremque, asperiores, neque at sunt ea quos laudantium eligendi maiores
+                        rem excepturi illum.</p>
+                </div>
+                <div class="footer-section productos">
+                    <h2>Productos</h2>
+                    <ul class="lista-productos">
+                        <li>Chocolate Caliente</li>
+                        <li>Cápsulas</li>
+                        <li>Café en grano</li>
+                        <li>Cápsulas Espresso</li>
+                        <li>Packs de cápsulas</li>
+                    </ul>
+                </div>
+                <div class="footer-section links">
+                    <h2>Enlaces Rápidos</h2>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section forma-contacto">
+                    <h2>Contactanos</h2>
+                    <p>Ingresar direccion</p>
+                    <p>E-mail: ingresar correo</p>
+                    <p>Whatsapp: +569 69696969</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            &copy; 2024 Tu Empresa | Todos los derechos reservados
+            <div class="botones-rss">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+        </div>
+
+
+
+    </footer>
+
 </body>
 
 </html>
