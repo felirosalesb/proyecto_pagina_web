@@ -15,19 +15,25 @@ body {
 }
 
 .carousel-caption {
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0;
-    right: 0;
+    position: relative;
+    top: 10%; /* Mover hacia arriba */
+    left: 10%; /* Mover hacia la izquierda */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 10px; /* Reducir el espacio de relleno */
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 40%; /* Reducir el ancho */
+    height: 20%; /* Reducir la altura */
+    text-align: center;
 }
+
+
+
+
+
 
 .carousel-caption h5{
     font-size: 40px;
