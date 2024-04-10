@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_contacto.css">
     <link rel="icon" href="granos-de-cafe (1).ico">
     <title>Cafecillos - Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,7 +18,7 @@
 
 <body>
     <!-- barra de navegacion-->
-    <div class="barra-navegacion-productos">
+    <div class="barra-navegacion-contacto">
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand text-white" href="#">Cafesillos</a>
@@ -43,51 +43,70 @@
     </div>
 
     <!--CONTACTO-->
-    <div class="container">
-        <div class="content">
-            <div class="left-side">
-                <div class="address details">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="topic">Direccion</div>
-                    <div class="text-one">Poner direccion</div>
+    <div class="row justify-content-center">
+
+        <div class="col-lg-10">
+            <div class="wrapper img" style="background-image: url(images/img.jpg);">
+                <div class="row">
+                    <div class="col-md-9 col-lg-7">
+                        <div class="contact-wrap w-100 p-md-5 p-4">
+                            <h1 class="Ccontactanos-pagina">Contactanos!</h1>
+                            <div id="form-message-warning" class="mb-4"></div>
+
+                        </div>
+
+                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="label" for="nombre">Nombre</label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="label" for="email">Email</label>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="label" for="asunto">Asunto</label>
+                                        <input type="text" class="form-control" name="subject" id="subject"
+                                            placeholder="">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="label" for="#">Mensaje</label>
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="4"
+                                            placeholder=""></textarea>
+
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="boton-mensaje">
+                                            <input type="submit" value="Enviar mensaje" class="btn btn-primary">
+                                            <div class="submitting"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="phone details">
-                    <i class="fas fa-phone-alt"></i>
-                    <div class="topic">Telefono</div>
-                    <div class="text-one">+569 6969 6969</div>
-
-                </div>
-                <div class="email details">
-                    <i class="fas fa-envelope"></i>
-                    <div class="topic">Email</div>
-                    <div class="text-one">cafesillos@hotmail.com</div>
-
-                </div>
-            </div>
-            <div class="right-side">
-                <div class="topic-text">Envianos un mensaje</div>
-
-                <form action="#">
-                    <div class="input-box">
-                        <input type="text" placeholder="Enter your name">
-                    </div>
-                    <div class="input-box">
-                        <input type="text" placeholder="Enter your email">
-                    </div>
-                    <div class="input-box message-box">
-
-                    </div>
-                    <div class="button">
-                        <input type="button" value="Send Now">
-                    </div>
-                </form>
             </div>
         </div>
-    </div>
-    <div>
 
-        <img src="cafe-gif.gif" alt="cafe-gif           ">
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
 
     <!--FOOTER-->
     <footer>
