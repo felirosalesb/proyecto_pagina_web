@@ -1,6 +1,5 @@
 body {
     margin: 0px;
-
 }
 
 .kanit-thin {
@@ -18,26 +17,20 @@ body {
 .carousel-caption {
     position: relative;
     top: 10%;
-    /* Mover hacia arriba */
     left: 10%;
-    /* Mover hacia la izquierda */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     padding: 10px;
-    /* Reducir el espacio de relleno */
     background-color: rgba(0, 0, 0, 0.2);
     width: 40%;
-    /* Reducir el ancho */
     height: 20%;
-    /* Reducir la altura */
     text-align: center;
 }
 
 .barra-navegacion-productos {
-
     background-color: #444;
     background-size: cover;
     min-height: 8vh;
@@ -57,12 +50,9 @@ body {
     font-family: "Kanit", sans-serif;
 }
 
-
 .container-fluid {
     font-family: "Kanit", sans-serif;
 }
-
-
 
 .navbar-brand {
     font-size: 2rem;
@@ -78,11 +68,8 @@ body {
 
 .navbar-nav .nav-link {
     margin-right: 70px;
-    /* Ajusta el valor según sea necesario */
     font-size: 20px;
 }
-
-
 
 .lilita-one-regular {
     font-family: "Lilita One", sans-serif;
@@ -110,16 +97,11 @@ body {
     font-family: "Lilita One", sans-serif;
 }
 
-
 .opinion {
     flex: 0 0 45%;
-    /* Establecer el ancho máximo de cada opinión */
     margin: 10px;
-    /* Añadir un espacio entre las opiniones */
     padding: 10px;
-    /* Añadir espacio dentro de cada opinión */
     border: 1px solid #ccc;
-    /* Añadir un borde para mayor claridad */
 }
 
 .opinion .nombre {
@@ -158,14 +140,11 @@ footer {
 
 .footer-section.productos h2 {
     margin-bottom: 5px;
-    /* Ajusta el margen inferior del encabezado "Productos" */
 }
 
 .footer-section.productos .lista-productos {
     margin-top: 0;
-    /* Ajusta el margen superior de la lista */
     padding-left: 20px;
-    /* Ajusta el espacio entre el borde izquierdo y los elementos de la lista */
 }
 
 .links ul {
@@ -182,8 +161,6 @@ footer {
     flex-direction: column;
 }
 
-
-
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
@@ -193,14 +170,11 @@ footer {
 
 .social-icon {
     color: #000;
-    /* Color negro para los íconos */
     text-decoration: none;
-    /* Quitar subrayado en los enlaces */
 }
 
 .social-icon:hover {
     color: #000;
-    /* Color negro al pasar el mouse sobre los íconos */
 }
 
 #botones-rss {
@@ -259,7 +233,6 @@ footer {
         0 0 115px #FF3E00;
 }
 
-
 .fa-user:hover {
     background-color: #1b89f0;
     color: white;
@@ -277,7 +250,6 @@ footer {
         0 0 75px #38f742,
         0 0 115px #38f742;
 }
-
 
 /* beneficios */
 .container {
@@ -317,12 +289,6 @@ hr {
 }
 
 .conteiner_contacto {
-
     width: 85%;
-    background: #fff;
-    border-radius: 6px;
-    padding: 20px 60px 30px 40px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-
+   
 }
-/*  Carrito Compras */
