@@ -1,3 +1,4 @@
+
 body {
     margin: 0px;
 }
@@ -8,11 +9,6 @@ body {
     font-style: normal;
 }
 
-.bakbak-one-regular {
-    font-family: "Bakbak One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
 
 .carousel-caption {
     position: relative;
@@ -41,9 +37,11 @@ body {
 }
 
 .carousel-caption h5 {
-    font-size: 40px;
-    font-family: "Kanit", sans-serif;
-}
+        font-family: "Lobster", sans-serif;
+        font-size: 50px;
+        font-style: normal;
+      }
+
 
 .carousel-caption p {
     font-size: 20px;
