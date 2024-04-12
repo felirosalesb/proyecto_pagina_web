@@ -37,6 +37,10 @@ body {
     top: 0;
     z-index: 1;
 }
+.container-fluid {
+    font-family: "Kanit", sans-serif;
+}
+
 .navbar-brand {
     font-size: 2rem;
 }
@@ -51,8 +55,17 @@ body {
 
 .navbar-nav .nav-link {
     margin-right: 70px;
-    /* Ajusta el valor según sea necesario */
     font-size: 20px;
+}
+
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar-brand {
+    font-family: "Lilita One", sans-serif;
 }
 
 /* carrito*/
@@ -239,3 +252,20 @@ video.video-background{
     background-color: rgba(0, 0, 0, 0.5); /* Ajusta el último valor para cambiar la opacidad */
 }
 
+.fa-user:hover {
+    background-color: #1b89f0;
+    color: white;
+    box-shadow: 0 0 15px #1b89f0,
+        0 0 45px #1b89f0,
+        0 0 75px #1b89f0,
+        0 0 115px #1b89f0;
+}
+
+.fa-shopping-cart:hover {
+    background-color: #38f742;
+    color: white;
+    box-shadow: 0 0 15px #38f742,
+        0 0 45px #38f742,
+        0 0 75px #38f742,
+        0 0 115px #38f742;
+}
