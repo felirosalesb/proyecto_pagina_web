@@ -14,22 +14,6 @@ body {
     font-style: normal;
 }
 
-.carousel-caption {
-    position: relative;
-    top: 20%;
-    left: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 40%;
-    height: 20%;
-    text-align: center;
-}
-
 .barra-navegacion-productos {
     background-color: #444;
     background-size: cover;
@@ -38,16 +22,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1;
-}
-
-.carousel-caption h5 {
-    font-size: 40px;
-    font-family: "Kanit", sans-serif;
-}
-
-.carousel-caption p {
-    font-size: 20px;
-    font-family: "Kanit", sans-serif;
 }
 
 .container-fluid {
@@ -81,41 +55,6 @@ body {
     font-family: "Lilita One", sans-serif;
 }
 
-.titulo-Opiniones-Clinetes {
-    margin-top: 50px;
-    font-family: "Lilita One", sans-serif;
-    font-size: 70px;
-    justify-content: center;
-    text-align: center;
-}
-
-
-
-.opiniones {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-content: center;
-}
-
-
-
-.opinion {
-    flex: 0 0 45%;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.opinion .nombre {
-    font-weight: bold;
-}
-
-.opinion .texto {
-    margin-top: 5px;
-}
-
 footer {
     background-color: #333;
     color: #fff;
@@ -127,6 +66,18 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.card {
+    margin: 10px;
+    width: 18rem; /* Ancho fijo para cada tarjeta */
+}
+
 
 .footer-content {
     display: flex;
@@ -253,46 +204,4 @@ footer {
         0 0 45px #38f742,
         0 0 75px #38f742,
         0 0 115px #38f742;
-}
-
-/* beneficios */
-.container {
-    width: 80%;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.columna-beneficios {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.columna-beneficios img {
-    margin: 10px;
-}
-
-.columna-beneficios-textos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.columna-beneficios-textos p {
-    margin: 10px;
-}
-
-hr {
-    width: 100%;
-    margin: 20px 0;
-}
-
-.conteiner_contacto {
-    width: 85%;
-   
 }
