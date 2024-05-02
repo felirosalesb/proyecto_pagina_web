@@ -15,70 +15,74 @@
 </head>
 
 <body>
-    <!-- barra de navegacion-->
-    <div class="website-total-page">
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand text-white" href="#">Cafesillos</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
-                        <a class="nav-link text-white" href="pagina_de_productos.html">Productos</a>
-                        <a class="nav-link text-white" href="pagina_de_contacto.html">Contactanos</a>
+    <ul class="carrito"> == $0
+        <!-- barra de navegacion-->
+        <div class="website-total-page">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="#">Cafesillos</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link text-white" href="pagina_de_productos.html">Productos</a>
+                            <a class="nav-link text-white" href="pagina_de_contacto.html">Contactanos</a>
+                        </div>
+                    </div>
+                    <div class="ml-auto navbar-custom-icons">
+                        <a class="text-white" href="usuario.html"><i class="fas fa-user"></i></a>
+                        <a class="text-white ms-3" href="Carrito.html"><i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>
-                <div class="ml-auto navbar-custom-icons">
-                    <a class="text-white" href="usuario.html"><i class="fas fa-user"></i></a>
-                    <a class="text-white ms-3" href="Carrito.html"><i class="fas fa-shopping-cart"></i></a>
+            </nav>
+            <!--carrito-->
+            <div class="container">
+                <div class="cart">
+                    <h2>Carrito de Compras</h2>
+                    <ul class="cart-items">
+                        <!-- Aquí se agregarán los elementos del carrito -->
+                        <li>
+                            <img src="imagenesCarrito/Kenya.webp" alt="Producto 1">
+                            <span>Café de Kenia</span>
+                            <span>$20.00</span>
+                        </li>
+                        <li>
+                            <img src="imagenesCarrito/kenia-envase-250g.webp" alt="Producto 2">
+                            <span>Café Arabia</span>
+                            <span>$30.00</span>
+                        </li>
+                        <!-- Agrega más elementos según sea necesario -->
+                    </ul>
+                    <div class="cart-total">
+                        Total: <span class="total-price">$50.00</span>
+                    </div>
+                </div>
+                <div class="checkout">
+                    <h2>Registro de Ubicación</h2>
+                    <form>
+                        <label for="address">Dirección de Envío:</label>
+                        <input type="text" id="address" name="address" required>
+                        <label for="city">Ciudad:</label>
+                        <input type="text" id="city" name="city" required>
+                        <label for="country">País:</label>
+                        <input type="text" id="country" name="country" required>
+                        <button type="submit">Comprar</button>
+                    </form>
                 </div>
             </div>
-        </nav>
-        <!--carrito-->
-        <div class="container">
-            <div class="cart">
-                <h2>Carrito de Compras</h2>
-                <ul class="cart-items">
-                    <!-- Aquí se agregarán los elementos del carrito -->
-                    <li>
-                        <img src="Kenya.webp" alt="Producto 1">
-                        <span>Café de Kenia</span>
-                        <span>$20.00</span>
-                    </li>
-                    <li>
-                        <img src="kenia-envase-250g.webp" alt="Producto 2">
-                        <span>Café Arabia</span>
-                        <span>$30.00</span>
-                    </li>
-                    <!-- Agrega más elementos según sea necesario -->
-                </ul>
-                <div class="cart-total">
-                    Total: <span class="total-price">$50.00</span>
-                </div>
-            </div>
-            <div class="checkout">
-                <h2>Registro de Ubicación</h2>
-                <form>
-                    <label for="address">Dirección de Envío:</label>
-                    <input type="text" id="address" name="address" required>
-                    <label for="city">Ciudad:</label>
-                    <input type="text" id="city" name="city" required>
-                    <label for="country">País:</label>
-                    <input type="text" id="country" name="country" required>
-                    <button type="submit">Comprar</button>
-                </form>
-            </div>
-        </div>
             <div class="video-background">
-                <video class="elementor-video" src="https://www.realcoffee.cl/wp-content/uploads/2023/12/WhatsApp-Video-2021-09-27-at-23.43.17-Compressed-with-FlexClip.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
-                <div class ="overlay"> </div>
+                <video class="elementor-video"
+                    src="https://www.realcoffee.cl/wp-content/uploads/2023/12/WhatsApp-Video-2021-09-27-at-23.43.17-Compressed-with-FlexClip.mp4"
+                    autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                <div class="overlay"> </div>
             </div>
-       <!--  -->     
-        
+            <!--  -->
+    </ul>
+
 </body>
 
 </html>

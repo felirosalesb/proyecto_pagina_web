@@ -1,3 +1,10 @@
+.carrito {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(150px,
+                1fr));
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,7 +25,8 @@ body {
     margin-right: 15px;
     border-radius: 50%;
     padding: 15px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35); /* Ajusta los valores según desees */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+    /* Ajusta los valores según desees */
     transition: 1s ease;
 }
 
@@ -37,6 +45,7 @@ body {
     top: 0;
     z-index: 1;
 }
+
 .container-fluid {
     font-family: "Kanit", sans-serif;
 }
@@ -69,7 +78,7 @@ body {
 }
 
 /* carrito*/
-    
+
 .container {
     display: flex;
     justify-content: center;
@@ -94,14 +103,14 @@ body {
 .cart-items {
     list-style-type: none;
     padding: 0;
-    color: #ccc ;
+    color: #ccc;
 }
 
 .cart-items li {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    
+
 }
 
 .cart-items img {
@@ -112,7 +121,7 @@ body {
 .cart-total {
     margin-top: 10px;
     text-align: right;
-    color: #ccc ;
+    color: #ccc;
 
 }
 
@@ -121,7 +130,7 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    color: #ccc ;
+    color: #ccc;
 
 }
 
@@ -157,7 +166,7 @@ body {
 }
 
 
-    /* registro -  */
+/* registro -  */
 .checkout-btn {
     display: block;
     width: 100%;
@@ -180,7 +189,7 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    color: #ccc ;
+    color: #ccc;
 
 }
 
@@ -218,9 +227,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
-video.video-background{
+
+video.video-background {
     overflow: clip;
-    
+
 }
 
 .video-background {
@@ -231,7 +241,7 @@ video.video-background{
     left: 0;
     overflow: hidden;
     z-index: -1;
-   
+
 }
 
 #video-background {
@@ -249,7 +259,8 @@ video.video-background{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el último valor para cambiar la opacidad */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Ajusta el último valor para cambiar la opacidad */
 }
 
 .fa-user:hover {
