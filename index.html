@@ -53,10 +53,10 @@
 
         <script> const navE1 = document.querySelector('.navbar');
             Window.addEventListener('scroll', () => {
-                if (window.scrollY >= 100) {
-                    navE1.classList.add('navbar-scrolled');
+                if (window.scrollY >= 700) {
+                    navE1.style.background = 'black';
                 }
-                else if (window.scrollY < 100) {
+                else (window.scrollY < 700) {
                     navE1.classList.remove('navbar-scrolled');
                 };
 
