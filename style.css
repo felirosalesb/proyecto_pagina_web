@@ -170,6 +170,10 @@ footer {
     margin-bottom: 10px;
 }
 
+.footer-section.links a {
+    color: white; /* Cambia el color de los enlaces a blanco */
+}
+
 .forma-contacto {
     display: flex;
     flex-direction: column;
@@ -306,3 +310,4 @@ hr {
     width: 85%;
 
 }
+

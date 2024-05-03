@@ -24,7 +24,7 @@ body {
 .barra-navegacion-productos {
     background-color: #444;
     background-size: cover;
-    min-height: 8vh;
+    min-height: 9vh;
     margin-bottom: 10px;
     position: sticky;
     top: 0;
@@ -34,6 +34,7 @@ body {
 .container-fluid {
     font-family: "Kanit", sans-serif;
 }
+
 
 .navbar-brand {
     font-size: 2rem;
@@ -119,6 +120,9 @@ footer {
 
 .links ul li {
     margin-bottom: 10px;
+}
+.footer-section.links a {
+    color: white; /* Cambia el color de los enlaces a blanco */
 }
 
 .forma-contacto {
