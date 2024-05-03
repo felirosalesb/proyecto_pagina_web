@@ -28,7 +28,7 @@
 
     <!-- barra de navegacion-->
     <div class="website-total-page">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-scrolled">
+        <nav class="navbar navbar-expand-lg fixed-top ">
             <div class="container-fluid">
                 <a class="navbar-brand text-white" href="#">Cafesillos</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -50,18 +50,18 @@
                 </div>
             </div>
         </nav>
+        <script>
+            const navE1 = document.querySelector('.navbar')
 
-        <script> const navE1 = document.querySelector('.navbar');
-            Window.addEventListener('scroll', () => {
-                if (window.scrollY >= 700) {
-                    navE1.style.background = 'black';
-                }
-                else (window.scrollY < 700) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY >= 53) {
+                    navE1.classList.add('navbar-scrolled')
+                } else if (window.scrollY < 53) {
                     navE1.classList.remove('navbar-scrolled');
-                };
-
+                }
             });
         </script>
+
 
         <!-- carrusel con las fotos -->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">

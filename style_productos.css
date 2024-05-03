@@ -1,3 +1,10 @@
+.style_productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(150px,
+                1fr));
+}
+
 body {
     margin: 0px;
 }
@@ -69,13 +76,16 @@ footer {
 
 .card-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se envuelvan a la siguiente línea */
+    justify-content: center;
+    /* Centra las tarjetas horizontalmente */
 }
 
 .card {
     margin: 10px;
-    width: 18rem; /* Ancho fijo para cada tarjeta */
+    width: 18rem;
+    /* Ancho fijo para cada tarjeta */
 }
 
 
