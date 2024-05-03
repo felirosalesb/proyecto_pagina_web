@@ -136,15 +136,7 @@ input[type="submit"] hover {
     font-style: normal;
 }
 
-.barra-navegacion-productos {
-    background-color: #444;
-    background-size: cover;
-    min-height: 8vh;
-    margin-bottom: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
+
 
 .container-fluid {
     font-family: "Kanit", sans-serif;
