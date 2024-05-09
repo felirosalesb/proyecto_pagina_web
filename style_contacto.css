@@ -22,32 +22,13 @@ body {
     font-style: normal;
 }
 
-.carousel-caption {
-    position: relative;
-    top: 10%;
-    /* Mover hacia arriba */
-    left: 10%;
-    /* Mover hacia la izquierda */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 10px;
-    /* Reducir el espacio de relleno */
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 40%;
-    /* Reducir el ancho */
-    height: 20%;
-    /* Reducir la altura */
-    text-align: center;
-}
+
 
 .barra-navegacion-contacto {
 
     background-color: #444;
     background-size: cover;
-    min-height: 9vh;
+    min-height: 10vh;
     margin-bottom: 10px;
     position: sticky;
     top: 0;
