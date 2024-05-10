@@ -23,15 +23,15 @@ body {
 }
 
 .barra-navegacion-contacto {
-
-    background-color: #444;
+    background-color: #000000;
     background-size: cover;
-    min-height: 8vh;
+    min-height: 10vh;
     margin-bottom: 10px;
     position: sticky;
     top: 0;
     z-index: 1;
 }
+
 
 .carousel-caption h5 {
     font-size: 40px;

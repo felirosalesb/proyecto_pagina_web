@@ -26,7 +26,7 @@ body {
 
 .barra-navegacion-contacto {
 
-    background-color: #444;
+    background-color: #000000;
     background-size: cover;
     min-height: 10vh;
     margin-bottom: 10px;
@@ -307,3 +307,25 @@ footer {
     margin-top: 10px;
     margin-bottom: 40px;
 }
+
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+ .gmp-map {
+    /* Establece un tamaño específico para el mapa */
+    width: 50%; /* Puedes ajustar el ancho según tus preferencias */
+    height: 400px; /* Puedes ajustar la altura según tus preferencias */
+    margin: auto; /* Centra el mapa horizontalmente */
+    /* Opcional: añade margen superior e inferior para centrar verticalmente */
+    margin-top: 20px; /* Ajusta según sea necesario */
+    margin-bottom: 20px; /* Ajusta según sea necesario */
+  }
+ 
+ 
+  /* Optional: Makes the sample page fill the window. */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
