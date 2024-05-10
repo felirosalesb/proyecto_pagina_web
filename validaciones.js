@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Crear un objeto representando el producto
         const producto = {
             nombre: nombre,
-            precio: precio
+            precio: precio.replace(".", "")
         };
 
         // Obtener el carrito de compras del almacenamiento local o inicializar uno vacío
@@ -77,15 +77,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 const nuevoProducto = document.createElement('li');
                 nuevoProducto.innerHTML = `
                     <span>${producto.nombre}</span>
-                    <span>${producto.precio}/${((parseInt(producto.precio.replace(".", "").replace("$", ""))) / dolar).toFixed(2)}</span>
+                    <span>${producto.precio} / USD $ ${((parseInt(producto.precio.replace(".", "").replace("$", ""))) / dolar).toFixed(2)}</span>
                 `;
                 listaCarrito.appendChild(nuevoProducto);
             });
 
             // Calcular y mostrar el total del carrito
             const total = carrito.reduce((total, producto) => total + parseFloat(producto.precio.replace('$', '')), 0);
+
             const totalElemento = document.querySelector('.total-price');
-            totalElemento.textContent = `$${total.toFixed(2)}`;
+            totalElemento.textContent = `CLP $ ${total} / USD $ ${(total / dolar).toFixed(2)}`;
+
+
 
         }).catch(function (error) {
             console.log('Requestfailed', error);
