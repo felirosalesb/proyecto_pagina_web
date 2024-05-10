@@ -23,15 +23,15 @@ body {
 }
 
 .barra-navegacion-contacto {
-
-    background-color: #444;
+    background-color: #000000;
     background-size: cover;
-    min-height: 8vh;
+    min-height: 10vh;
     margin-bottom: 10px;
     position: sticky;
     top: 0;
     z-index: 1;
 }
+
 
 .carousel-caption h5 {
     font-size: 40px;
@@ -74,36 +74,25 @@ body {
     font-family: "Lilita One", sans-serif;
 }
 
-/* registro -  */
-.checkout-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-.checkout-btn:hover {
-    background-color: #0056b3;
-}
 
 
 .registration-form {
-    width: 700px;
+    width: 600px;
     margin: 200px auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 3px solid #ccc;
+    border-radius: 3px;
     color: #ccc;
 
 }
 
 .registration-form h2 {
     text-align: center;
+    color: white !important; /* Asegura que el color del texto del h2 sea blanco */
 }
+
+
 
 .form-group {
     margin-bottom: 15px;
@@ -200,3 +189,7 @@ video.video-background {
         0 0 75px #38f742,
         0 0 115px #38f742;
 }
+
+
+
+

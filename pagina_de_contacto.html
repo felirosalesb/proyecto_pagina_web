@@ -13,7 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9a334a7bb3.js" crossorigin="anonymous"></script>
-
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA3Lg9DMNyDrfBqPa52M-vYPwhw_0vpng&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+    <script src="validaciones.js"></script>
 </head>
 
 <body>
@@ -44,7 +46,6 @@
 
     <!--CONTACTO-->
     <div class="row justify-content-center">
-
         <div class="col-lg-10">
             <div class="wrapper img" style="background-image: url(images/img.jpg);">
                 <div class="row">
@@ -52,10 +53,8 @@
                         <div class="contact-wrap w-100 p-md-5 p-4">
                             <h1 class="Ccontactanos-pagina">Contactanos!</h1>
                             <div id="form-message-warning" class="mb-4"></div>
-
                         </div>
-
-                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                        <form method="POST" id="contactForm" name="contactForm" class="contactForm" onsubmit="return validarFormulario()">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -72,65 +71,55 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="label" for="asunto">Asunto</label>
-                                        <input type="text" class="form-control" name="subject" id="subject"
-                                            placeholder="">
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="">
                                     </div>
                                 </div>
-
-
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="label" for="#">Mensaje</label>
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="4"
-                                            placeholder=""></textarea>
-
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder=""></textarea>
                                     </div>
-
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         Enviar
                                     </button>
-
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Enviar mensaje
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Enviar mensaje</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     ¿Desea confirmar?
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Cerrar</button>
-                                                    <button type="button" class="btn btn-primary">Confirmar</button>
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                    <button type="submit" class="btn btn-primary">Confirmar</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    
         
         
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    </section>
-
+    
+    <div class="gmp-map-container">
+        <div class="gmp-map">
+          <gmp-map center="-33.694175720214844,-71.21369171142578" zoom="14" map-id="DEMO_MAP_ID">
+        <gmp-advanced-marker position="-33.694175720214844,-71.21369171142578" title="My location"></gmp-advanced-marker>
+      </gmp-map>
+        </div>
+      </div>
 
 
     <!--FOOTER-->

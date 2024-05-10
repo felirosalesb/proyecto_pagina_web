@@ -12,12 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9a334a7bb3.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
     <ul class="carrito"> == $0
         <!-- barra de navegacion-->
-        <div class="website-total-page">
+        <div class="barra-navegacion-contacto">
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container-fluid">
                     <a class="navbar-brand text-white" href="#">Cafesillos</a>
@@ -39,6 +40,7 @@
                     </div>
                 </div>
             </nav>
+<<<<<<< HEAD
             <!--carrito-->
             <div class="container">
                 <div class="cart">
@@ -64,15 +66,54 @@
                         <input type="text" id="country" name="country" required>
                         <button type="submit">Comprar</button>
                     </form>
+=======
+        </div>
+        <!--carrito-->
+        <div class="container">
+            <div class="cart">
+                <h2>Carrito de Compras</h2>
+                <ul class="cart-items">
+                    <!-- Aquí se agregarán los elementos del carrito -->
+                </ul>
+                <div class="cart-total">
+                    Total: <span class="total-price">$0.00</span>
+                    <button class="btn-limpiar-carrito">Limpiar carrito</button>
+>>>>>>> 47f6a68f82642d87be508bf7ab57408011d65b9c
                 </div>
             </div>
-            <div class="video-background">
-                <video class="elementor-video"
-                    src="https://www.realcoffee.cl/wp-content/uploads/2023/12/WhatsApp-Video-2021-09-27-at-23.43.17-Compressed-with-FlexClip.mp4"
-                    autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
-                <div class="overlay"> </div>
+
+
+            <div class="checkout">
+                <h2>Registro de Ubicación</h2>
+                <form onsubmit="return validarDireccion()">
+                    <label for="address">Dirección de Envío:</label>
+                    <input type="text" id="address" name="address">
+                    <div id="error-address" class="error-message"></div>
+            
+                    <label for="city">Ciudad:</label>
+                    <input type="text" id="city" name="city">
+                    <div id="error-city" class="error-message"></div>
+            
+                    <label for="country">País:</label>
+                    <input type="text" id="country" name="country">
+                    <div id="error-country" class="error-message"></div>
+            
+                    <button type="submit">Continuar</button>
+                </form>
+                <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a>.</p>
             </div>
-            <!--  -->
+            
+            
+            
+            
+        </div>
+        <div class="video-background">
+            <video class="elementor-video"
+                src="https://www.realcoffee.cl/wp-content/uploads/2023/12/WhatsApp-Video-2021-09-27-at-23.43.17-Compressed-with-FlexClip.mp4"
+                autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+            <div class="overlay"> </div>
+        </div>
+        <!--  -->
     </ul>
     <script src="validaciones.js"></script>
 
