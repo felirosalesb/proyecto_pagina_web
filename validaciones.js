@@ -259,6 +259,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// Obtener todos los contenedores de tarjetas
+const cardContainers = document.querySelectorAll('.card-container');
+
+// Iterar sobre cada contenedor de tarjetas
+cardContainers.forEach(container => {
+    // Obtener todos los botones "Agregar al carrito" dentro del contenedor actual
+    const botonesAgregar = container.querySelectorAll('.btn-agregar-carrito');
+
+    // Iterar sobre cada botón "Agregar al carrito" dentro del contenedor actual
+    botonesAgregar.forEach(boton => {
+        // Agregar un evento clic a cada botón
+        boton.addEventListener('click', () => {
+            // Obtener el título del producto
+            const tituloProducto = boton.closest('.card').querySelector('.card-title').innerText;
+
+            // Mostrar una alerta indicando que el producto se ha agregado al carrito
+            alert(`El producto "${tituloProducto}" se ha agregado al carrito.`);
+        });
+    });
+});
 
 
 
