@@ -18,20 +18,22 @@ body {
 
 
 .carousel-caption {
-    position: relative;
-    top: 20%;
-    left: 10%;
+    position: absolute;
+    top: 0%; /* Centra verticalmente */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 10px;
+    padding: 20px; /* Aumenta el relleno interior */
     background-color: rgba(0, 0, 0, 0.2);
-    width: 40%;
-    height: 20%;
+    max-width: 80%; /* Máximo ancho del texto */
     text-align: center;
+    margin: 0 auto; /* Centra horizontalmente */
+    left: 0; /* Reiniciamos el valor left */
+    right: 0; /* Reiniciamos el valor right */
 }
+
 
 .barra-navegacion-productos {
     background-color: #444;
@@ -311,3 +313,31 @@ hr {
 
 }
 
+@media (max-width: 720px) {
+    .carousel-caption h5,
+    .carousel-caption p {
+        font-size: 1.2em; /* Ajusta el tamaño del texto aquí */
+    }
+}
+
+
+/* Para pantallas más pequeñas que 700px */
+@media (max-width: 700px) {
+    .columna-beneficios img {
+        width: 100px; /* Ajusta el tamaño de las imágenes */
+        height: 100px; /* Ajusta el tamaño de las imágenes */
+    }
+}
+
+
+@media (max-width: 500px) {
+    .columna-beneficios img {
+        width: 80px; /* Reducir aún más el tamaño de las imágenes */
+        height: 80px; /* Reducir aún más el tamaño de las imágenes */
+    }
+
+
+    .carousel-caption {
+        display: none; /* Ocultar el texto del carrusel */
+    }
+}
