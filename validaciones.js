@@ -1,29 +1,39 @@
-function validarUser() {
-    let usernameInput = document.querySelector(".formulario input[type='text']");
-    let errorMessage = document.querySelector("#error-user");
-    if (usernameInput.value.trim().length >= 6) {
-        usernameInput.classList.add("correct");
-        usernameInput.classList.remove("incorrect");
-        errorMessage.innerHTML = "&nbsp;";
-    } else {
+function validarInicioSesion() {
+    let usernameInput = document.getElementById("username");
+    let passwordInput = document.getElementById("password");
+    let usernameError = document.getElementById("error-username");
+    let passwordError = document.getElementById("error-password");
+    let isValid = true;
+
+    // Validación del nombre de usuario
+    if (usernameInput.value.trim() === "") {
         usernameInput.classList.add("incorrect");
-        usernameInput.classList.remove("correct");
-        errorMessage.innerHTML = "Error, su nombre de usuario debe tener minimo 6 caracteres.";
-    }
-}
-function validarPassword() {
-    let passwordInput = document.querySelector(".formulario input[type='password']");
-    let errorMessage = document.querySelector("#error-password");
-    if (passwordInput.value.trim().length >= 6) {
-        passwordInput.classList.add("correct");
-        passwordInput.classList.remove("incorrect");
-        errorMessage.innerHTML = "&nbsp;";
+        usernameError.textContent = "Por favor, ingresa tu nombre de usuario.";
+        isValid = false;
     } else {
-        passwordInput.classList.add("incorrect");
-        passwordInput.classList.remove("correct");
-        errorMessage.innerHTML = "Error, ingrese mínimo 6 caracteres.";
+        usernameInput.classList.remove("incorrect");
+        usernameError.textContent = "";
     }
+
+    // Validación de la contraseña
+    if (passwordInput.value.trim() === "") {
+        passwordInput.classList.add("incorrect");
+        passwordError.textContent = "Por favor, ingresa tu contraseña.";
+        isValid = false;
+    } else {
+        passwordInput.classList.remove("incorrect");
+        passwordError.textContent = "";
+    }
+
+    return isValid;
 }
+
+
+
+
+
+
+
 
 function validarDireccion() {
     let addressInput = document.getElementById("address");
@@ -111,7 +121,7 @@ function validarRegistro() {
         return false;
     }
 
-    // Validación de formato de correo electrónico utilizando una expresión regular básica
+    // Validación de formato de correo electrónico 
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email.value.trim())) {
         alert('Por favor, ingrese un correo electrónico válido');

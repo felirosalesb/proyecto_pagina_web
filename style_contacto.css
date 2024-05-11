@@ -35,15 +35,7 @@ body {
     z-index: 1;
 }
 
-.carousel-caption h5 {
-    font-size: 40px;
-    font-family: "Kanit", sans-serif;
-}
 
-.carousel-caption p {
-    font-size: 20px;
-    font-family: "Kanit", sans-serif;
-}
 
 
 .container-fluid {
@@ -78,21 +70,7 @@ body {
     font-style: normal;
 }
 
-.titulo-Opiniones-Clinetes {
-    margin-top: 50px;
-    font-family: "Lilita One", sans-serif;
-    font-size: 70px;
-    justify-content: center;
-    text-align: center;
-}
 
-.opiniones {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-content: center;
-}
 
 .navbar-brand {
     font-family: "Lilita One", sans-serif;
@@ -295,6 +273,15 @@ footer {
     font-weight: 400;
     font-style: normal;
     font-size: 90px;
+    margin-bottom: 0px;
+}
+
+.Sucursal-contacto {
+
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
     margin-bottom: 0px;
 }
 
