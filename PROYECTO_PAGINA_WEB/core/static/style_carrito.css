@@ -1,0 +1,239 @@
+.style_carrito {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(150px,
+                1fr));
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*parte de arriba*/
+.kanit-thin {
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.navbar-custom-icons i {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-right: 15px;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+    /* Ajusta los valores según desees */
+    transition: 1s ease;
+}
+
+.bakbak-one-regular {
+    font-family: "Bakbak One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.barra-navegacion-productos {
+    background-color: #444;
+    background-size: cover;
+    min-height: 8vh;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.container-fluid {
+    font-family: "Kanit", sans-serif;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar .navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 70px;
+    font-size: 20px;
+}
+
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar-brand {
+    font-family: "Lilita One", sans-serif;
+}
+
+/* carrito*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 90px;
+    padding: 100px;
+}
+
+.cart {
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart h2 {
+    text-align: center;
+    color: #ccc;
+}
+
+.cart-items {
+    list-style-type: none;
+    padding: 0;
+    color: #ccc;
+}
+
+.cart-items li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.cart-items img {
+    width: 70px;
+    margin-right: 10px;
+}
+
+.cart-total {
+    margin-top: 10px;
+    text-align: right;
+    color: #ccc;
+
+}
+
+.checkout {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #ccc;
+
+}
+
+.checkout h2 {
+    text-align: center;
+}
+
+.checkout form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout label {
+    margin-bottom: 5px;
+}
+
+.checkout input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.checkout button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout button:hover {
+    background-color: #0056b3;
+}
+
+
+/* registro -  */
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+video.video-background {
+    overflow: clip;
+
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Ajusta el último valor para cambiar la opacidad */
+}
+
+.fa-user:hover {
+    background-color: #1b89f0;
+    color: white;
+    box-shadow: 0 0 15px #1b89f0,
+        0 0 45px #1b89f0,
+        0 0 75px #1b89f0,
+        0 0 115px #1b89f0;
+}
+
+.fa-shopping-cart:hover {
+    background-color: #38f742;
+    color: white;
+    box-shadow: 0 0 15px #38f742,
+        0 0 45px #38f742,
+        0 0 75px #38f742,
+        0 0 115px #38f742;
+}
