@@ -26,10 +26,10 @@
 
 <body>
 
-
+    {% include 'core/header.html' %}
     <!-- barra de navegacion-->
     <div class="website-total-page">
-        <nav class="navbar navbar-expand-lg fixed-top ">
+        <!-- <nav class="navbar navbar-expand-lg fixed-top ">
             <div class="container-fluid">
                 <a class="navbar-brand text-white" href="#">Cafesillos</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -50,7 +50,7 @@
                     <a class="text-white ms-3" href="Carrito.html"><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <script>
             const navE1 = document.querySelector('.navbar')
 
@@ -202,57 +202,8 @@
         </div>
 
     </div>
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section about">
-                    <h2>Sobre Nosotros</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, id repellendus?
-                        Laudantium, quae neque.
-                        Explicabo, eius? Ipsa doloremque, asperiores, neque at sunt ea quos laudantium eligendi maiores
-                        rem excepturi illum.</p>
-                </div>
-                <div class="footer-section productos">
-                    <h2>Productos</h2>
-                    <ul class="lista-productos">
-                        <li>Chocolate Caliente</li>
-                        <li>Cápsulas</li>
-                        <li>Café en grano</li>
-                        <li>Cápsulas Espresso</li>
-                        <li>Packs de cápsulas</li>
-                    </ul>
-                </div>
-                <div class="footer-section links">
-                    <h2>Enlaces Rápidos</h2>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section forma-contacto">
-                    <h2>Contactanos</h2>
-                    <p>Ingresar direccion</p>
-                    <p>E-mail: ingresar correo</p>
-                    <p>Whatsapp: </p>
-                </div>
-            </div>
-        </div>
 
-
-        <div class="footer-bottom">
-            &copy; 2024 Tu Empresa | Todos los derechos reservados
-            <div class="botones-rss">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i
-                        class="fa-brands fa-instagram"></i></a>
-            </div>
-
-        </div>
-
-
-
-    </footer>
+    {% include 'core/footer.html' %}
 
 </body>
 
