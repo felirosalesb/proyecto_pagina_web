@@ -42,14 +42,18 @@ body {
 
 
 .barra-navegacion {
-    background-color: #444;
-    background-size: cover;
-    min-height: 8vh;
-    margin-bottom: 10px;
+    background-color: rgba(68, 68, 68, 0.5); /* Fondo semi-transparente */
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2; /* La barra de navegación estará por encima del carrusel */
 }
+
+.carousel {
+    position: relative;
+    z-index: 1; /* El carrusel estará detrás de la barra de navegación */
+}
+
+
 
 .navbar-scrolled {
     background-color: black;

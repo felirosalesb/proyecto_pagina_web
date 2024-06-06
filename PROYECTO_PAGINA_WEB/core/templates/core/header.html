@@ -9,14 +9,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
-                    <a class="nav-link text-white" href="pagina_de_productos.html">Productos</a>
-                    <a class="nav-link text-white" href="pagina_de_contacto.html">Contactanos</a>
+                    <a class="nav-link active text-white" aria-current="page" href="{% url 'home' %}">Inicio</a>
+                    <a class="nav-link text-white" href="{% url 'productos' %}">Productos</a>
+                    <a class="nav-link text-white" href="{% url 'contacto' %}">Contactanos</a>
                 </div>
             </div>
             <div class="ml-auto navbar-custom-icons">
-                <a class="text-white" href="login.html"><i class="fas fa-user"></i></a>
-                <a class="text-white ms-3" href="Carrito.html"><i class="fas fa-shopping-cart"></i></a>
+                <a class="text-white" href="{% url 'login' %}"><i class="fas fa-user"></i></a>
+                <a class="text-white ms-3" href="{% url 'carrito' %}"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
     </nav>
