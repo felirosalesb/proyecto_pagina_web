@@ -33,11 +33,19 @@
                 <h5>${{item.precio}} CLP</h5>
                 <p class="card-text">Una mezcla exquisita de granos de café arábica de diferentes regiones del mundo.
                     Notas de cacao, frutos secos y un toque de caramelo.</p>
-                <button class="btn btn-primary btn-agregar-carrito" data-producto="aromas-del-mundo">Agregar al
-                    carrito</button>
+                <div class="boton-agregar">
+                    <button class="btn btn-primary btn-agregar-carrito" data-producto="aromas-del-mundo">Agregar al
+                        carrito</button>
+                    <span class="stock">Stock: {{ item.stock }}</span>
+                </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
+    </div>
+    
+    
+    
+    
 
         <!-- <div class="card">
             <img src="{% static 'imagenesProductos/cafe_dlara.webp' %}" class="card-img-top" alt="cafe_en_grano">
@@ -121,12 +129,12 @@
                 <button class="btn btn-primary btn-agregar-carrito" data-producto="tostado-oscuro">Agregar al carrito</button>
             </div>
         </div> -->
-    </div>
+    
 
 
     <!--FOOTER-->
     {% include 'core/footer.html' %}
-    <script src="validaciones.js"></script>
+    <script src="{% static 'validaciones.js' %}"></script>
 
 </body>
 
