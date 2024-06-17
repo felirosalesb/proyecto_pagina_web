@@ -15,7 +15,19 @@
                 </div>
             </div>
             <div class="ml-auto navbar-custom-icons">
+                
+
+                {% if user.is_authenticated %}
+               
+                {{user.username}}
+                <a href="">Salir</a>
+
+                {% else %}
                 <a class="text-white" href="{% url 'login' %}"><i class="fas fa-user"></i></a>
+
+                {% endif %}
+
+                
                 <a class="text-white ms-3" href="{% url 'carrito' %}"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from.models import *
+from django.contrib.auth.views import logout_then_login
+
 
 # Create your views here.
 def home(request):
@@ -15,4 +17,5 @@ def contacto(request):
     return render(request, 'core/pagina_de_contacto.html')
 def usuario(request):
     return render(request, 'core/usuario.html')
-
+def logout(request):
+    return logout_then_login(request)
