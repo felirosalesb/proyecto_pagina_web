@@ -15,127 +15,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9a334a7bb3.js" crossorigin="anonymous"></script>
+    <style>
+        /* Estilos adicionales si es necesario */
+    </style>
 </head>
-
 
 <body>
     <!-- barra de navegacion-->
     {% include 'core/header.html' %}
 
+    <!-- Contenedor principal de las tarjetas -->
+    <div class="container mt-4">
+        <div class="row">
+            {% for item in productos %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'imagenesProductos/cafe_dlara_2.webp' %}" class="card-img-top"
+                        alt="cafe_en_grano">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ item.detalle }}</h4>
+                        <h5>${{ item.precio }} CLP</h5>
+                        <span>Stock : {{ item.stock }}</span>
+                        <!-- ¿DEBERIAMOS PONER LAS  DESCRIPCIONES? -->
 
-    <!-- cards productos -->
-    <div class="card-container">
-        {% for item in productos %}
-        <div class="card">
-            <img src="{% static 'imagenesProductos/cafe_dlara_2.webp' %}" class="card-img-top" alt="cafe_en_grano">
-            <div class="card-body">
-                <h4 class="card-title">{{ item.detalle }}</h4>
-                <h5>${{item.precio}} CLP</h5>
-                <p class="card-text">Una mezcla exquisita de granos de café arábica de diferentes regiones del mundo.
-                    Notas de cacao, frutos secos y un toque de caramelo.</p>
-                <div class="boton-agregar">
-                    <button class="btn btn-primary btn-agregar-carrito" data-producto="aromas-del-mundo">Agregar al
-                        carrito</button>
-                    <span class="stock">Stock: {{ item.stock }}</span>
+                        <button class="btn btn-primary btn-agregar-carrito" data-producto="{{ item.slug }}">Agregar al
+                            carrito</button>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-    
-    
-    
-    
-
-        <!-- <div class="card">
-            <img src="{% static 'imagenesProductos/cafe_dlara.webp' %}" class="card-img-top" alt="cafe_en_grano">
-            <div class="card-body">
-                <h4 class="card-title">Café en Grano “Espresso Intenso”</h4>
-                <h5>$12.500 CLP</h5>
-                <p class="card-text">Granos tostados oscuros para un espresso fuerte y lleno de sabor. Perfecto para los
-                    amantes del café intenso y con carácter.</p>
-                <button class="btn btn-primary btn-agregar-carrito" data-producto="espresso-intenso">Agregar al carrito</button>
-            </div>
-        </div>
-        
-        <div class="card">
-            <img src="{% static 'imagenesProductos/cafe_dlara_3.webp' %}" class="card-img-top" alt="cafe_en_grano">
-            <div class="card-body">
-                <h4 class="card-title">Café en Grano “Orgánico”</h4>
-                <h5>$13.500 CLP</h5>
-                <p class="card-text">Cultivado de manera sostenible y tostado a la perfección. Aroma dulce y cuerpo
-                    suave. Una opción consciente para los amantes del café.</p>
-                <button class="btn btn-primary btn-agregar-carrito" data-producto="organico">Agregar al carrito</button>
-            </div>
-        </div>
-        
-        <div class="card">
-            <img src="{% static 'imagenesProductos/cafe_dlara_4.webp' %}" class="card-img-top" alt="cafe_en_grano">
-            <div class="card-body">
-                <h4 class="card-title">Café en Grano “Vainilla Supreme”</h4>
-                <h5>$13.500 CLP</h5>
-                <p class="card-text">Notas sutiles de vainilla en cada taza. Ideal para quienes buscan un toque de
-                    dulzura en su café matutino</p>
-                <button class="btn btn-primary btn-agregar-carrito" data-producto="vainilla-supreme">Agregar al carrito</button>
-            </div>
-        </div>
-
-
-
-    </div>
-    <div class="card-container">
-        <div class="card">
-            <img src="{% static 'imagenesProductos/cafe_dlara_5.webp' %}" class="card-img-top" alt="cafe_en_grano">
-            <div class="card-body">
-                <h4 class="card-title">Café en Grano “Descafeinado Suave</h4>
-                <h5>$13.500 CLP</h5>
-                <p class="card-text">Para aquellos que aman el sabor del café pero prefieren evitar la cafeína. Notas de
-                    avellana y chocolate en un café suave.
-                </p>
-                <button class="btn btn-primary btn-agregar-carrito" data-producto="descafeinado-suave">Agregar al carrito</button>
-            </div>
-        </div>
-        
-        <div class="card">
-            <img src="{% static 'imagenesProductos/cafe_en_grano_1.png' %}" class="card-img-top" alt="cafe_en_grano">
-            <div class="card-body">
-                <h4 class="card-title">Café en Grano “Montaña Dorada”</h4>
-                <h5>$30.500 CLP</h5>
-                <p class="card-text">Granos de altura cultivados en las montañas. Sabor afrutado y acidez equilibrada.
-                    Una experiencia única en cada sorbo.
-                </p>
-                <button class="btn btn-primary btn-agregar-carrito" data-producto="montana-dorada">Agregar al carrito</button>
-            </div>
-        </div>
-        
-        <div class="card">
-            <img src="{% static 'imagenesProductos/cafe_en_grano_1.png' %}" class="card-img-top" alt="cafe_en_grano">
-            <div class="card-body">
-                <h4 class="card-title">Café en Grano “Arábica Premium”</h4>
-                <h5>$20.500 CLP</h5>
-                <p class="card-text">Granos 100% arábica seleccionados cuidadosamente. Sabor suave con notas florales y
-                    un toque de nuez.</p>
-                <button class="btn btn-primary btn-agregar-carrito" data-producto="arabica-premium">Agregar al carrito</button>
-            </div>
-        </div>
-        
-        <div class="card">
-            <img src="{% static 'imagenesProductos/cafe_en_grano_1.png' %}" class="card-img-top" alt="cafe_en_grano">
-            <div class="card-body">
-                <h4 class="card-title">Café en Grano “Tostado Oscuro”</h4>
-                <h5>$22.500 CLP</h5>
-                <p class="card-text">STostado profundo para un sabor robusto y ahumado. Perfecto para preparar un café
-                    americano o un cortado.</p>
-                <button class="btn btn-primary btn-agregar-carrito" data-producto="tostado-oscuro">Agregar al carrito</button>
-            </div>
-        </div> -->
-    
-
 
     <!--FOOTER-->
     {% include 'core/footer.html' %}
-    <script src="{% static 'validaciones.js' %}"></script>
 
+    <!-- Scripts al final para carga eficiente -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p4glgwkf4Ssoy+kXus4smR7t6wffvxQhJsP8mEwshR6p6U6Z3fOXgqXU9S5Xa2G4"
+        crossorigin="anonymous"></script>
+    <script src="validaciones.js"></script>
 </body>
 
 </html>
