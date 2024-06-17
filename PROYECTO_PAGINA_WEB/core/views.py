@@ -11,7 +11,6 @@ def carrito(request):
 def productos(request):
     productos = Producto.objects.all()
     return render(request, 'core/pagina_de_productos.html', {'productos':productos})
-
 def contacto(request):
     return render(request, 'core/pagina_de_contacto.html')
 def usuario(request):
