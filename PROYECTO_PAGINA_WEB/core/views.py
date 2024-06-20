@@ -9,7 +9,7 @@ def home(request):
 def login(request):
     return render(request, 'core/login.html')
 def carrito(request):
-    return render(request, 'core/Carrito.html')
+    return render(request, 'core/Carrito.html', {"carro":request.session.get("carro", [])})
 def productos(request):
     productos = Producto.objects.all()
     return render(request, 'core/pagina_de_productos.html', {'productos':productos})
@@ -19,3 +19,32 @@ def usuario(request):
     return render(request, 'core/usuario.html')
 def logout(request):
     return logout_then_login(request)
+def add_to_car(request, codigo):
+    productos = Producto.objects.get(codigo=codigo)
+    carro = request.session.get("carro", [])
+    for item in carro:
+        if item[0] == codigo:
+            item[4] += 1
+            item[5] = item[3] * item[4]
+            break
+    else:
+        carro.append([codigo, productos.detalle, productos.imagen, productos.precio, 1, productos.precio])
+    request.session["carro"]= carro
+    return carrito(request)
+
+def limpiar(request):
+    request.session.flush()
+    return carrito(request)
+
+def dropitem(request, codigo):
+    carro = request.session.get("carro", [])
+    for item in carro:
+        if item[0] == codigo:
+            item[4] > 1
+            item[4] += 1
+            item[5] = item[3] * item[4]
+            break
+        else:
+            carro.remove(item)
+    request.session["carro"]= carro
+    return carrito(request)
