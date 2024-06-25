@@ -19,26 +19,21 @@
 <body>
     {% include 'core/header.html' %}
 
+
     <div class="checkout">
         <form action="" method="post">
             {% csrf_token %}
             {{form | crispy }}
-            <button type="submit">Ingresar</button>
+            <button type="submit">Registrarse</button>
 
         </form>
     </div>
 
-
-
-
-
-
-
-    <div class="video-background">
+    <!-- <div class="video-background">
         <video class="elementor-video" src="{% static 'videosXD/45358-443057031.mp4' %}" autoplay="" loop=""
             muted="muted" playsinline="" controlslist="nodownload"></video>
         <div class="overlay"> </div>
-    </div>
+    </div>-->
 
 
 </body>

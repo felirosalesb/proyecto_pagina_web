@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from.models import *
 from django.contrib.auth.views import logout_then_login
+from .forms import *
 
 
 # Create your views here.
@@ -18,7 +19,21 @@ def contacto(request):
 def usuario(request):
     return render(request, 'core/usuario.html')
 def logout(request):
-    return logout_then_login(request)
+    return logout_then_login(request, login_url="login")
+
+#Registro
+def registro(request):
+    if request.method == "post":
+        registro == Registro(request.post)
+        if registro.is_valid():
+            registro.save()
+            return redirect(to="login")
+    else:
+        registro = Registro()
+    return render(request, 'core/registro.html', {'form' :registro})
+
+
+
 def add_to_car(request, codigo):
     productos = Producto.objects.get(codigo=codigo)
     carro = request.session.get("carro", [])
