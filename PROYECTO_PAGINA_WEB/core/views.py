@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from.models import *
 from django.contrib.auth.views import logout_then_login
 from .forms import *
-from .models import Producto, Carrito, ItemCarrito
+
 
 # Create your views here.
 def home(request):
