@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from.models import *
 from django.contrib.auth.views import logout_then_login
 from .forms import *
-
+from .models import Producto, Carrito, ItemCarrito
 
 # Create your views here.
 def home(request):
@@ -32,34 +32,17 @@ def registro(request):
         registro = Registro()
     return render(request, 'core/registro.html', {'form' :registro})
 
-
-
-def add_to_car(request, codigo):
-    productos = Producto.objects.get(codigo=codigo)
-    carro = request.session.get("carro", [])
-    for item in carro:
-        if item[0] == codigo:
-            item[4] += 1
-            item[5] = item[3] * item[4]
-            break
+#carro 
+def agregar_al_carrito(request, producto_id):
+    carrito_id = request.session.get('carrito_id')
+    if not carrito_id:
+        carrito = Carrito.objects.create()
+        request.session['carrito_id'] = carrito.id
     else:
-        carro.append([codigo, productos.detalle, productos.imagen, productos.precio, 1, productos.precio])
-    request.session["carro"]= carro
-    return carrito(request)
+        carrito = get_object_or_404(Carrito, id=carrito_id)
 
-def limpiar(request):
-    request.session.flush()
-    return carrito(request)
-
-def dropitem(request, codigo):
-    carro = request.session.get("carro", [])
-    for item in carro:
-        if item[0] == codigo:
-            item[4] > 1
-            item[4] += 1
-            item[5] = item[3] * item[4]
-            break
-        else:
-            carro.remove(item)
-    request.session["carro"]= carro
-    return carrito(request)
+    producto = get_object_or_404(Producto, codigo=producto_id)
+    item_carrito, _ = ItemCarrito.objects.get_or_create(carrito=carrito, producto=producto, stock=1)
+    carrito.items.add(item_carrito)
+    carrito.actualizar_total()
+    return redirect('nombre_de_la_vista_para_lista_de_productos')
