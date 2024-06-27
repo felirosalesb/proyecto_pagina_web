@@ -32,17 +32,4 @@ def registro(request):
         registro = Registro()
     return render(request, 'core/registro.html', {'form' :registro})
 
-#carro 
-def agregar_al_carrito(request, producto_id):
-    carrito_id = request.session.get('carrito_id')
-    if not carrito_id:
-        carrito = Carrito.objects.create()
-        request.session['carrito_id'] = carrito.id
-    else:
-        carrito = get_object_or_404(Carrito, id=carrito_id)
 
-    producto = get_object_or_404(Producto, codigo=producto_id)
-    item_carrito, _ = ItemCarrito.objects.get_or_create(carrito=carrito, producto=producto, stock=1)
-    carrito.items.add(item_carrito)
-    carrito.actualizar_total()
-    return redirect('nombre_de_la_vista_para_lista_de_productos')
