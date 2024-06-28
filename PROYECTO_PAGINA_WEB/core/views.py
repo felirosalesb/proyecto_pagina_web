@@ -22,15 +22,14 @@ def logout(request):
 
 #Registro
 def registro(request):
-    if request.method == "post":
-        registro == Registro(request.post)
+    if request.method == "POST":
+        registro = Registro(request.POST)
         if registro.is_valid():
             registro.save()
             return redirect(to="login")
     else:
         registro = Registro()
     return render(request, 'core/registro.html', {'form' :registro})
-
 
 def lista_productos(request):
     productos = Producto.objects.all()

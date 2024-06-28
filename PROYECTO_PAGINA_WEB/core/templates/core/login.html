@@ -24,6 +24,7 @@
             {% csrf_token %}
             {{form | crispy }}
             <button type="submit">Ingresar</button>
+            <a href="{% url 'registro' %}">Crear una cuenta</a>
 
         </form>
     </div>
