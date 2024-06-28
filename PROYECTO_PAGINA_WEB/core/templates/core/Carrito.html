@@ -18,57 +18,66 @@
 </head>
 
 <body>
-    <ul class="carrito">
 
-        <!-- barra de navegacion-->
-        {% include 'core/header.html' %}
 
-        <!--carrito-->
-        <div class="container">
-            <div class="cart">
-                <h2>Carrito de Compras</h2>
-                <ul class="cart-items">
-                    <!-- Aquí se agregarán los elementos del carrito -->
+    <!-- barra de navegacion-->
+    {% include 'core/header.html' %}
+
+    <!--carrito-->
+    <div class="container">
+        <div class="cart">
+            <h2>Carrito de Compras</h2>
+
+            {% if request.session.carrito %}
+            <div class="mt-4">
+                <ul class="list-group">
+                    {% for item in request.session.carrito %}
+                    <li class="list-group-item">
+                        {{ item.titulo }} - ${{ item.precio }}
+                    </li>
+                    {% endfor %}
                 </ul>
-                <div class="cart-total">
-                    Total: <span class="total-price">$0.00</span>
-                    <button class="btn-limpiar-carrito">Limpiar carrito</button>
-
-                </div>
             </div>
-
-
-            <div class="checkout">
-                <h2>Registro de Ubicación</h2>
-                <form onsubmit="return validarDireccion()">
-                    <label for="address">Dirección de Envío:</label>
-                    <input type="text" id="address" name="address">
-                    <div id="error-address" class="error-message"></div>
-
-                    <label for="city">Ciudad:</label>
-                    <input type="text" id="city" name="city">
-                    <div id="error-city" class="error-message"></div>
-
-                    <label for="country">País:</label>
-                    <input type="text" id="country" name="country">
-                    <div id="error-country" class="error-message"></div>
-
-                    <button type="submit">Continuar</button>
-                </form>
-                <p>¿Ya tienes una cuenta? <a href="{% url 'login' %}">Inicia sesión</a>.</p>
-            </div>
-
-
-
-
+            <!-- Botón para limpiar el carrito -->
+            <form action="{% url 'limpiar_carrito' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger mt-3">Limpiar Carrito</button>
+            </form>
+            {% endif %}
         </div>
-        <div class="video-background">
-            <video class="elementor-video" src="{% static 'videosXD/videoLogin.mp4' %}" autoplay="" loop=""
-                muted="muted" playsinline="" controlslist="nodownload"></video>
-            <div class="overlay"> </div>
+        <div class="checkout">
+            <h2>Registro de Ubicación</h2>
+            <form onsubmit="return validarDireccion()">
+                <label for="address">Dirección de Envío:</label>
+                <input type="text" id="address" name="address">
+                <div id="error-address" class="error-message"></div>
+
+                <label for="city">Ciudad:</label>
+                <input type="text" id="city" name="city">
+                <div id="error-city" class="error-message"></div>
+
+                <label for="country">País:</label>
+                <input type="text" id="country" name="country">
+                <div id="error-country" class="error-message"></div>
+
+                <button type="submit">Continuar</button>
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="{% url 'login' %}">Inicia sesión</a>.</p>
         </div>
-        <!--  -->
-    </ul>
+    </div>
+
+
+
+
+
+
+    <div class="video-background">
+        <video class="elementor-video" src="{% static 'videosXD/videoLogin.mp4' %}" autoplay="" loop="" muted="muted"
+            playsinline="" controlslist="nodownload"></video>
+        <div class="overlay"> </div>
+    </div>
+    <!--  -->
+
 
 
     <script src="{% static 'validaciones.js' %}"></script>
