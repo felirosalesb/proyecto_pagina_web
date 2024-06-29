@@ -10,6 +10,59 @@ body {
 
 }
 
+.kanit-thin {
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.bakbak-one-regular {
+    font-family: "Bakbak One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.barra-navegacion {
+    background-color: #000000;
+    background-size: cover;
+    min-height: 9vh;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.container-fluid {
+    font-family: "Kanit", sans-serif;
+}
+
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar .navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 70px;
+    font-size: 20px;
+}
+
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar-brand {
+    font-family: "Lilita One", sans-serif;
+}
 
 .checkout {
     flex: 1;
@@ -17,7 +70,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #ccc;
-    margin: 250px auto 0 auto;
+    margin: 50px auto 0 auto;
     /* Centra verticalmente y establece margen superior de 200px */
     max-width: 500px;
     /* Limita el ancho máximo del formulario */
@@ -202,3 +255,22 @@ video.video-background {
     --bs-text-opacity: 1;
     color: rgb(255 255 255 / 75%) !important;
 }
+
+.logout-icon i:hover {
+    background-color: #f00;
+    color: white;
+    box-shadow: 0 0 15px #f00,
+                0 0 45px #f00,
+                0 0 75px #f00,
+                0 0 115px #f00;
+}
+
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #07ff45;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+

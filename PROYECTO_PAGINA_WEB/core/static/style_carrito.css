@@ -37,6 +37,15 @@ body {
 }
 
 
+.barra-navegacion {
+    background-color: #000000;
+    background-size: cover;
+    min-height: 9vh;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 
 .container-fluid {
     font-family: "Kanit", sans-serif;
@@ -229,3 +238,22 @@ video.video-background {
         0 0 75px #38f742,
         0 0 115px #38f742;
 }
+
+.logout-icon i:hover {
+    background-color: #f00;
+    color: white;
+    box-shadow: 0 0 15px #f00,
+                0 0 45px #f00,
+                0 0 75px #f00,
+                0 0 115px #f00;
+}
+
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #07ff45;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+

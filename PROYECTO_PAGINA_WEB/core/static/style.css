@@ -274,6 +274,29 @@ footer {
         0 0 115px #1b89f0;
 }
 
+.logout-icon i:hover {
+    background-color: #f00;
+    color: white;
+    box-shadow: 0 0 15px #f00,
+                0 0 45px #f00,
+                0 0 75px #f00,
+                0 0 115px #f00;
+}
+
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #07ff45;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+
+
+/* Si deseas agregar un icono al lado del nombre */
+
+
 .fa-shopping-cart:hover {
     background-color: #38f742;
     color: white;

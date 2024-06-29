@@ -15,19 +15,15 @@
                 </div>
             </div>
             <div class="ml-auto navbar-custom-icons">
-                
-
                 {% if user.is_authenticated %}
-               
-                {{user.username}}
-                <a href="">Salir</a>
-
+                    <span class="user-name">{{ user.username }}</span>
+                    <a class="text-white logout-icon" href="#" title="Cerrar sesión" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-user"></i></a>
+                    <form id="logout-form" method="POST" action="{% url 'logout' %}" style="display: none;">
+                        {% csrf_token %}
+                    </form>
                 {% else %}
-                <a class="text-white" href="{% url 'login' %}"><i class="fas fa-user"></i></a>
-
+                    <a class="text-white" href="{% url 'login' %}" title="Iniciar sesión"><i class="fas fa-user"></i></a>
                 {% endif %}
-
-                
                 <a class="text-white ms-3" href="{% url 'carrito' %}"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>

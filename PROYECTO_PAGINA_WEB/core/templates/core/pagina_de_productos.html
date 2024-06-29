@@ -23,53 +23,35 @@
 <body>
     <!-- barra de navegacion-->
     {% include 'core/header.html' %}
+    
+
     <!-- Contenedor principal de las tarjetas -->
     <div class="container mt-4">
         <div class="row">
             {% for item in productos %}
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="{% static 'imagenesProductos/cafe_dlara_2.webp' %}" class="card-img-top"
-                            alt="cafe_en_grano">
-                        <div class="card-body">
-                            <h4 class="card-title">{{ item.titulo }}</h4>
-                            <h5>${{ item.precio }} CLP</h5>
-                            <span>Stock: {{ item.stock }}</span>
-                            <span>id: {{ item.id }}</span>
-                            <div class="card-footer">
-                                <form action="{% url 'agregar_al_carrito' item.codigo %}" method="post">
-                                    {% csrf_token %}
-                                    <button type="submit" class="btn btn-primary">Agregar al carrito</button>
-                                </form>
-                            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'imagenesProductos/cafe_dlara_2.webp' %}" class="card-img-top"
+                        alt="cafe_en_grano">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ item.titulo }}</h4>
+                        <h5>${{ item.precio }} CLP</h5>
+                        <span>Stock: {{ item.stock }}</span>
+                        <span>id: {{ item.id }}</span>
+                        <div class="card-footer">
+                            <form action="{% url 'agregar_al_carrito' item.codigo %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-primary">Agregar al carrito</button>
+                            </form>
                         </div>
                     </div>
                 </div>
+            </div>
             {% endfor %}
         </div>
 
-        <!-- Botón para limpiar el carrito -->
-        <form action="{% url 'limpiar_carrito' %}" method="post">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-danger mt-3">Limpiar Carrito</button>
-        </form>
 
-        <!-- Mostrar el contenido del carrito si existe en la sesión -->
-  <!--     {% if request.session.carrito %}
-            <div class="mt-4">
-                <h2>Carrito de Compras</h2>
-                <ul class="list-group">
-                    {% for item in request.session.carrito %}
-                        <li class="list-group-item">
-                            {{ item.titulo }} - ${{ item.precio }}
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endif %}
-    </div> --> 
-
-    <!--FOOTER-->
+    </div>
     {% include 'core/footer.html' %}
 
     <!-- Scripts al final para carga eficiente -->
