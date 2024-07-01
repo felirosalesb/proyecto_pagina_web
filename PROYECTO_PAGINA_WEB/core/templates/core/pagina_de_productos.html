@@ -23,7 +23,7 @@
 <body>
     <!-- barra de navegacion-->
     {% include 'core/header.html' %}
-    
+
 
     <!-- Contenedor principal de las tarjetas -->
     <div class="container mt-4">
@@ -34,18 +34,17 @@
                     <img src="{% static 'imagenesProductos/cafe_dlara_2.webp' %}" class="card-img-top"
                         alt="cafe_en_grano">
                     <div class="card-body">
-                        <h4 class="card-title">{{ item.detalle}}</h4>
+                        <h4 class="card-title">{{ item.detalle }}</h4>
                         <h5>${{ item.precio }} CLP</h5>
-                        <p>
-                            cafe de granos orientales con le aroma a canela y limon perteneciente de la india y kenia
-                        </p>
-                        <span>Stock: {{ item.stock }}</span>
-                        <div class="card-footer">
-                            <form action="{% url 'agregar_al_carrito' item.codigo %}" method="post">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-primary">Agregar al carrito</button>
-                            </form>
-                        </div>
+                        <p class="card-text">{{ item.descripcion }}</p>
+                        <span class="stock">Stock: {{ item.stock }}</span>
+                    </div>
+                    <div class="card-footer">
+                        <form class="add-to-cart-form" action="{% url 'agregar_al_carrito' item.codigo %}"
+                            method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary">Agregar al carrito</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -54,13 +53,28 @@
 
 
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const forms = document.querySelectorAll('.add-to-cart-form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevenir el envío del formulario
+                    // Mostrar la alerta
+                    alert('Producto agregado al carrito correctamente');
+                    // Luego enviar el formulario
+                    form.submit();
+                });
+            });
+        });
+    </script>
+
     {% include 'core/footer.html' %}
 
     <!-- Scripts al final para carga eficiente -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p4glgwkf4Ssoy+kXus4smR7t6wffvxQhJsP8mEwshR6p6U6Z3fOXgqXU9S5Xa2G4"
         crossorigin="anonymous"></script>
-    <script src="validaciones.js"></script>
+    <script src="{% static 'validaciones.js' %}"></script>
 </body>
 
 </html>
